@@ -1,0 +1,34 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;600&family=Playfair+Display:wght@600&display=swap');
+@import "tailwindcss";
+
+
+:root {
+  --font-heading: 'Playfair Display', serif;
+  --font-body: 'Inter', sans-serif;
+}
+
+body {
+  font-family: var(--font-body);
+  background-color: #FDF7FA; /* optional: soft background */
+  color: #C81059; /* optional: text color */
+}
+
+.hero {
+    background: radial-gradient(
+    circle,
+    #cb1347 10%,     /* lightest center */
+    #b80b50 50%,    /* main tone */
+    #7a082f 100%    /* darkest edge */
+  );
+}
+
+
+h1, h2, h3 {
+  font-family: var(--font-heading);
+  color: #FFF2F5; /* headline color */
+}
+
+button, a {
+  font-family: var(--font-body);
+  font-weight: 600;
+}
