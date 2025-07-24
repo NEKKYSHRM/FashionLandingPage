@@ -1,34 +1,93 @@
-@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;600&family=Playfair+Display:wght@600&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@400;600&family=Playfair+Display:wght@600&display=swap");
 @import "tailwindcss";
 
-
 :root {
-  --font-heading: 'Playfair Display', serif;
-  --font-body: 'Inter', sans-serif;
+  --font-heading: "Playfair Display", serif;
+  --font-body: "Inter", sans-serif;
 }
 
 body {
   font-family: var(--font-body);
-  background-color: #FDF7FA; /* optional: soft background */
-  color: #C81059; /* optional: text color */
+  background-color: #fdf7fa; /* optional: soft background */
+  color: #c81059; /* optional: text color */
 }
 
 .hero {
-    background: radial-gradient(
+  background: radial-gradient(
     circle,
-    #cb1347 10%,     /* lightest center */
-    #b80b50 50%,    /* main tone */
-    #7a082f 100%    /* darkest edge */
+    #cb1347 10%,
+    /* lightest center */ #b80b50 50%,
+    /* main tone */ #7a082f 100% /* darkest edge */
   );
 }
 
-
-h1, h2, h3 {
+h1,
+h2,
+h3 {
   font-family: var(--font-heading);
-  color: #FFF2F5; /* headline color */
+  color: #fff2f5; /* headline color */
 }
 
-button, a {
+.hblack {
+  font-family: var(--font-heading);
+  color: black; /* headline color */
+}
+
+button,
+a {
   font-family: var(--font-body);
   font-weight: 600;
 }
+
+
+
+@keyframes slide-horizontal {
+  0% {
+    transform: translateX(0%);
+  }
+  100% {
+    transform: translateX(-50%);
+  }
+}
+
+@keyframes slide-horizontal-reverse {
+  0% {
+    transform: translateX(-50%);
+  }
+  100% {
+    transform: translateX(0%);
+  }
+}
+
+.animate-slide-horizontal {
+  animation: slide-horizontal 20s linear infinite;
+}
+
+.animate-slide-horizontal-reverse {
+  animation: slide-horizontal-reverse 20s linear infinite;
+}
+
+.meme {
+  background: radial-gradient(circle at 20% 30%, #ca084c 0%, transparent 40%),
+    radial-gradient(circle at 80% 40%, #4d0622 0%, transparent 50%),
+    radial-gradient(circle at 50% 80%, #ac0347 0%, transparent 50%), #c81059; /* base background */
+  background-blend-mode: multiply;
+}
+
+@keyframes appear {
+  from {
+    opacity: 0;
+    scale: 0.5;
+  }
+  to {
+    opacity: 1;
+    scale: 1;
+  }
+}
+
+.blockbox {
+  animation: appear linear;
+  animation-timeline: view();
+  animation-range: entry 0% cover 40%;
+}
+
