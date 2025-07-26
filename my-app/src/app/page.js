@@ -31,7 +31,7 @@ export default function Home() {
         {/* Right: Content */}
         <div className="text-white space-y-3 md:space-y-6 text-center md:text-left">
           <h3 className="text-5xl md:text-7xl font-heading text-[#FFF2F5]">
-            Hi, I'm Jhanvi
+            Hi, I&apos;m Jhanvi
           </h3>
           <p className="text-xl md:text-2xl text-[#FFF2F5]">
             I help girls glow with confidence
