@@ -1,13 +1,25 @@
-import { Link } from "lucide-react";
+"use client";
+
+// import { Link } from "lucide-react";
+import Link from "next/link";
 import Image from "next/image";
 import { FaExternalLinkAlt } from "react-icons/fa";
 import { FaInstagramSquare } from "react-icons/fa";
 import { FaYoutube } from "react-icons/fa";
 import { FaTwitter } from "react-icons/fa";
 import { FaLinkedin } from "react-icons/fa";
+import { useRouter } from "next/navigation";
+import { useEffect, useState } from "react";
 
 export default function Home() {
-  
+  const router = useRouter();
+
+  const handleRedirect = () => {
+    router.push("/cta"); // change to your desired route
+  };
+
+  const heroImages = ["/images/1.png", "/images/s6.png"];
+
   return (
     <div className="w-full meme flex flex-col items-center justify-center">
       <section className="hero w-full pb-7 rounded-b-2xl md:pb-0 md:px-6 pt-16 md:pt-24 grid grid-cols-1 md:grid-cols-2 gap-5 md:gap-12 items-center">
@@ -25,7 +37,8 @@ export default function Home() {
             I help girls glow with confidence
           </p>
           <button
-            className="px-4 py-2 md:px-6 md:py-3 rounded-sm md:rounded-lg text-sm md:text-xl text-white font-normal hover:brightness-110 transition"
+            onClick={handleRedirect}
+            className="px-4 py-2 md:px-6 md:py-3 rounded-sm md:rounded-lg text-sm md:text-xl text-white font-normal cursor-pointer hover:brightness-110 transition"
             style={{ backgroundColor: "#F4A300" }}
           >
             Work with Me
@@ -33,7 +46,7 @@ export default function Home() {
         </div>
       </section>
 
-      <section className="w-full px-6 md:px-40 pt-8 md:pt-12 pb-6 grid grid-cols-[35%_65%] md:gap-10 place-content-center">
+      <section className="w-full px-6 md:px-40 pt-8 md:pt-12 pb-6 grid grid-cols-[35%_65%] md:gap-10">
         <div className="w-full">
           <h3 className="text-xl md:text-5xl pb-5 md:pb-12 font-heading text-[#FFF2F5]">
             Latest Looks
@@ -50,9 +63,9 @@ export default function Home() {
             </video>
           </div>
         </div>
-        <div className="w-full grid grid-cols-2 place-content-center justify-center">
-          <div className="w-full flex flex-col gap-5 md:gap-10 justify-center">
-            <div className="w-[20vw] md:w-[20vw] h-[40vw] md:h-[30vw] flex justify-center items-center relative rounded-lg overflow-hidden ">
+        <div className="w-full grid grid-cols-2 ">
+          <div className="w-fit justify-self-center flex flex-col gap-5 md:gap-10">
+            <div className="w-[24vw] md:w-[20vw] h-[40vw] md:h-[30vw] flex justify-center items-center relative rounded-lg overflow-hidden ">
               <Image
                 src="/images/s3.png"
                 alt="Hero"
@@ -64,13 +77,13 @@ export default function Home() {
               <h3 className="text-lg md:text-5xl pb-2 md:pb-5 font-heading text-[#FFF2F5]">
                 Skincare <br /> Tips
               </h3>
-              <p className="text-white text-[9px] md:text-xl cursor-pointer underline">
+              <p className="text-white text-[8px] md:text-xl cursor-pointer underline">
                 View More
               </p>
             </div>
           </div>
-          <div className="w-full flex flex-col gap-4 justify-center">
-            <div className="w-[20vw] h-[20vh] md:h-[25vw] flex justify-center items-center relative rounded-lg overflow-hidden">
+          <div className="w-fit justify-self-center flex flex-col gap-4">
+            <div className="w-[24vw] h-[22vh] md:h-[25vw] flex justify-center items-center relative rounded-lg overflow-hidden">
               <Image
                 src="/images/s2.png"
                 alt="Hero"
@@ -78,7 +91,7 @@ export default function Home() {
                 className="object-cover"
               />
             </div>
-            <div className="w-[20vw] h-full md:h-[24vw] flex justify-center items-center relative rounded-lg overflow-hidden">
+            <div className="w-[24vw] h-full md:h-[24vw] flex justify-center items-center relative rounded-lg overflow-hidden">
               <Image
                 src="/images/s1.png"
                 alt="Hero"
@@ -248,7 +261,7 @@ export default function Home() {
         </div>
       </section>
 
-      <section className="w-full flex flex-col gap-28 md:gap-60 items-center px-6 md:px-40 py-10 md:py-20 md:pt-28">
+      <section className="w-full flex flex-col gap-24 md:gap-60 items-center px-6 md:px-40 py-10 md:py-20 md:pt-28">
         {/* SLIDE 1 */}
         <div className="w-full blockbox flex items-center bg-[#f9dee4] px-5 py-3 md:px-20 md:py-10 relative rounded-lg">
           <div className="flex flex-col">
@@ -272,7 +285,9 @@ export default function Home() {
         {/* SLIDE 2 */}
         <div className="w-full blockbox flex items-center bg-[#f9dee4] px-5 py-3 md:px-20 md:py-10 relative rounded-lg">
           <div className="flex flex-col">
-            <p className="text-xl md:text-7xl font-heading hblack">Amazon Page</p>
+            <p className="text-xl md:text-7xl font-heading hblack">
+              Amazon Page
+            </p>
             <p className="text-black pt-2 md:pt-6 text-xs md:text-2xl hover:underline cursor-pointer hover:text-[#C81059]">
               Browse my top picks in <br /> fashion, beauty and more.
             </p>
@@ -312,7 +327,9 @@ export default function Home() {
       </section>
 
       <section className="w-full flex justify-between px-6 md:px-40 py-3 md:py-10">
-        <h3 className="text-xl md:text-5xl font-heading text-[#FFF2F5]">Testimonials</h3>
+        <h3 className="text-xl md:text-5xl font-heading text-[#FFF2F5]">
+          Testimonials
+        </h3>
         <p className="text-white text-justify w-3/5 pt-2 md:pt-[10px] text-xs md:text-lg">
           Lorem Ipsum is simply dummy text of the printing and typesetting
           industry. Lorem Ipsum has been the industry's standard dummy text ever
@@ -332,13 +349,13 @@ export default function Home() {
           <FaInstagramSquare className="text-xl md:text-4xl text-center text-white cursor-pointer hover:text-amber-200" />
           <FaYoutube className="text-xl md:text-4xl text-center text-white cursor-pointer hover:text-amber-200" />
           <FaTwitter className="text-xl md:text-4xl text-center text-white cursor-pointer hover:text-amber-200" />
-          <FaLinkedin className="text-xl md:text-4xl text-center text-white cursor-pointer hover:text-amber-200"/>
+          <FaLinkedin className="text-xl md:text-4xl text-center text-white cursor-pointer hover:text-amber-200" />
         </div>
       </section>
 
-      <p className="text-white text-center pb-5 text-[8px] md:text-lg cursor-pointer hover:text-blue-200">
-          &copy; 2025 Soft Sculptures
-        </p>
+      <Link href={"/cta"} className="text-white text-center pb-5 text-[8px] md:text-lg cursor-pointer hover:text-blue-200">
+        &copy; 2025 Soft Sculptures
+      </Link>
     </div>
   );
 }
