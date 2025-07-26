@@ -105,7 +105,7 @@ export default function Home() {
 
       <section className="w-full flex flex-col px-6 md:px-40 py-3 md:py-10">
         <h3 className="text-xl md:text-5xl pb-3 md:pb-8 font-heading text-[#FFF2F5]">
-          Brands I've Worked With
+          Brands I&apos;ve Worked With
         </h3>
         {/* Upper */}
         <div className="overflow-hidden w-full md:py-1">
@@ -332,7 +332,7 @@ export default function Home() {
         </h3>
         <p className="text-white text-justify w-3/5 pt-2 md:pt-[10px] text-xs md:text-lg">
           Lorem Ipsum is simply dummy text of the printing and typesetting
-          industry. Lorem Ipsum has been the industry's standard dummy text ever
+          industry. Lorem Ipsum has been the industry&apos;s standard dummy text ever
           since the 1500s, when an unknown printer took a galley of type and
           scrambled it to make a type specimen book.
         </p>
