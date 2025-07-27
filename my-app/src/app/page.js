@@ -273,7 +273,7 @@ export default function Home() {
             </p>
             {/* <p className="text-sm underline">view more</p> */}
           </div>
-          <div className="w-[35vw] max-h-[180px] md:max-h-[270px] md:w-[30vw] h-[35vw] md:h-[30vw] flex justify-center items-center absolute top-1/2 right-6 md:right-28 -translate-y-1/2 rounded-lg overflow-hidden">
+          <div className="w-[35vw] max-h-[180px] md:max-h-[270px] lg:max-h-[300px] lg:h-[30vw] xl:h-[30vw] xl:max-h-[380vw] md:w-[30vw]  h-[35vw] md:h-[30vw] flex justify-center items-center absolute top-1/2 right-6 md:right-28 -translate-y-1/2 rounded-lg overflow-hidden">
             <Image
               src="/images/s4.png"
               alt="Hero"
@@ -292,7 +292,7 @@ export default function Home() {
               Browse my top picks in <br /> fashion, beauty and more.
             </p>
           </div>
-          <div className="w-[35vw] max-h-[180px] md:max-h-[270px] md:w-[30vw] h-[35vw] md:h-[30vw] flex justify-center items-center absolute top-1/2 right-6 md:right-28 -translate-y-1/2 rounded-lg overflow-hidden">
+          <div className="w-[35vw] max-h-[180px] md:max-h-[270px]  lg:max-h-[300px] lg:h-[30vw] xl:h-[30vw] xl:max-h-[380vw] md:w-[30vw] h-[35vw] md:h-[30vw] flex justify-center items-center absolute top-1/2 right-6 md:right-28 -translate-y-1/2 rounded-lg overflow-hidden">
             <Image
               src="/images/s5.png"
               alt="Hero"
@@ -315,7 +315,7 @@ export default function Home() {
               {/* <FaExternalLinkAlt className="text-2xl"/> */}
             </div>
           </div>
-          <div className="w-[35vw] max-h-[180px] md:max-h-[270px] md:w-[30vw] h-[35vw] md:h-[30vw] flex justify-center items-center absolute top-1/2 right-6 md:right-28 -translate-y-1/2 rounded-lg overflow-hidden">
+          <div className="w-[35vw] max-h-[180px] md:max-h-[270px] lg:max-h-[300px] lg:h-[30vw] xl:h-[30vw] xl:max-h-[380vw] md:w-[30vw] h-[35vw] md:h-[30vw] flex justify-center items-center absolute top-1/2 right-6 md:right-28 -translate-y-1/2 rounded-lg overflow-hidden">
             <Image
               src="/images/muse.png"
               alt="Hero"
